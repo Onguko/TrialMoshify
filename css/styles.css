@@ -334,8 +334,15 @@ display: flex;
     background: #02cdf1;
 }
 
+.card--primary .badge--primary {
+    background: #126de4;
+}
+
 /* Plans */
 
+.plan {
+    transition: transform 0.2s ease-out;
+}
 .plan__name {
     color: #fff;
     margin: 0;
@@ -364,6 +371,10 @@ display: flex;
     margin-bottom: 2rem;
 }
 
+.plan--popular {
+    transform: scale(1.1);
+}
+
 .plan--popular .card__header {
     position: relative;
 }
@@ -376,6 +387,15 @@ display: flex;
     top: -6px;
     right: 5%;
 }
+
+.plan:hover{
+transform: scale(1.05);
+}
+
+.plan--popular:hover{
+    transform: scale(1.15);
+    }
+    
 
 @media screen and (min-width:1024px){
     .plan__name {
@@ -752,4 +772,15 @@ transform: rotate(0);
     }
 
 
+}
+
+/* Plan Blocks */
+
+.block__plans .grid {
+    gap: 8rem 4rem;
+}
+
+.block__plans .cards {
+    max-width: 500px;
+    margin: 0 auto;
 }
