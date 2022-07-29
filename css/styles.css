@@ -15,6 +15,11 @@
 }
 
 /* Typography */
+::selection {
+    background-color: var(--color-primary);
+    color: #fff;
+
+}
 
 html {
     font-size: 62.5%;
@@ -22,7 +27,7 @@ html {
 
 body {
     font-family: Inter, Arial, Helvetica, sans-serif;
-    font-size: 2rem ;
+    font-size: 2.4rem ;
     line-height: 1.5;
     color: var(--color-body);
 }
@@ -43,6 +48,7 @@ h2 {
 
 h3 {
     font-size: 3rem;
+    font-weight: 500;
 }
 
 p {
@@ -137,7 +143,6 @@ a {
 .list {
     list-style: none;
     padding-left: 0;
-    color: var(--color-heading);
 }
 
 .list--inline .list__item {
@@ -148,6 +153,7 @@ a {
 .list--tick {
     list-style-image: url(../Images/tick.svg);
     padding-left: 3rem;
+    color: var(--color-heading);
 }
 
 .list--tick .list__item {
@@ -178,7 +184,7 @@ a {
 }
 
 .icon--primary {
-    fill:var(--color-primary);
+    fill:var(--color-primary); 
 }
 
 .icon-container {
@@ -419,18 +425,16 @@ transform: scale(1.05);
 /* Media */
 .media {
     display: flex;
+    margin-bottom: 3rem;
 }
 
 .media__title {
     margin-top: 0;
+    color: #fff;
 }
 
 .media__body {
     margin: 0 2rem;
-}
-
-.media__image{
-    margin-top: 1rem;
 }
 
 /* Quotes */
@@ -644,13 +648,13 @@ transform: rotate(0);
 }
 
 .block--skewed-right {
-    padding-bottom: calc(var(--padding-vertical)+4rem);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+    padding-bottom: calc(var(--padding-vertical)+20rem);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
 }
 
 .block--skewed-left {
     padding-bottom: calc(var(--padding-vertical)+4rem);
-    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
 }
 
 /* Navigation Bar */
@@ -808,4 +812,23 @@ transform: rotate(0);
     .feature:nth-of-type(even) .feature__content {
         order: 2;
     }
+}
+
+/*Showcase Block*/
+
+.block-showcase__image {
+    width: 100%;
+}
+
+@media screen and (min-width:768px) {
+.block-showcase .grid {
+        grid-template-columns: 50% 50%;
+    }
+
+.block-showcase__image {
+    width: auto;
+    max-width: 700px;
+    justify-self: end;
+}
+    
 }
