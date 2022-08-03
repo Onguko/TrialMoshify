@@ -909,3 +909,8 @@ transform: rotate(0);
     }
 }
 
+/* Sign-up Callout */
+.callout-signup {
+    transform: translateY(5rem);
+  }
+
